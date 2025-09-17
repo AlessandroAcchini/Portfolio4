@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Portfolio</title>
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-400">Mon Portfolio</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
+                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
+                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
+                    <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
+                    <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium">Veille Technologique</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <section class="container mx-auto px-4 py-16 text-center">
+            <h2 class="text-4xl font-extrabold mb-4 text-indigo-300">Bienvenue sur mon portfolio !</h2>
+            <p class="text-lg mb-8 text-indigo-300">Je suis développeur web passionné, découvrez mes projets et compétences.</p>
+            <a href="projets.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">Voir mes projets</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 shadow mt-8">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-400">
+            &copy; 2025 Mon Portfolio. Tous droits réservés.
+        </div>
+    </footer>
+</body>

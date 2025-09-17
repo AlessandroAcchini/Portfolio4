@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>À propos</title>
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-400">Mon Portfolio</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
+                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
+                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
+                    <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
+                    <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium">Veille Technologique</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <section class="container mx-auto px-4 py-16 flex flex-col items-center">
+            <h2 class="text-4xl font-extrabold mb-8 text-center text-indigo-300">À propos de moi</h2>
+            <img src="images/profil.png" alt="Photo de profil" class="rounded-full w-40 h-40 mb-6 border-4 border-indigo-400 shadow-lg object-cover">
+            <div class="max-w-2xl text-center">
+                <p class="text-lg mb-4 text-gray-300">
+                    Bonjour, je m'appelle <span class="text-indigo-400 font-bold">Alessandro Acchini</span>, étudiant en BTS SIO passionné par le développement web et les nouvelles technologies. 
+                    J'aime apprendre, relever des défis et créer des projets innovants.
+                </p>
+                <p class="text-lg mb-4 text-gray-300">
+                    Sur ce portfolio, vous trouverez mes réalisations, mes compétences et mes certifications. 
+                    N'hésitez pas à me contacter pour toute collaboration ou opportunité professionnelle !
+                </p>
+                <a href="pdf/cv.pdf" target="_blank" class="inline-block bg-indigo-500 text-white px-6 py-3 rounded-lg shadow hover:bg-indigo-600 transition mt-4">Voir mon CV</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 shadow mt-8">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-400">
+            &copy; 2025 Mon Portfolio. Tous droits réservés.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Certifications</title>
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-400 mb-4 md:mb-0">Mon Portfolio</h1>
+            <nav>
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
+                    <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
+                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
+                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
+                    <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
+                    <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium">Veille Technologique</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <section class="container mx-auto px-4 py-10 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-indigo-300">Mes Certifications</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certification 1 -->
+                <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center">
+                    <img src="images/mooc.png" alt="Certification 1" class="rounded-lg w-32 h-32 sm:w-44 sm:h-44 object-contain mb-4">
+                    <a href="pdf/certifmooc.pdf" target="_blank" class="text-indigo-300 hover:underline text-center">Voir la certification MOOC</a>
+                </div>
+                <!-- Certification 2 -->
+                <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center">
+                    <img src="images/CNIL_logo.png" alt="Certification 2" class="rounded-lg w-32 h-24 sm:w-44 sm:h-32 object-contain mb-4">
+                    <a href="pdf/ATELIER_RGPD.pdf" target="_blank" class="text-indigo-300 hover:underline text-center">Voir l'atelier RGPD</a>
+                </div>
+                <!-- Certification 3 -->
+                <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center">
+                    <img src="images/pix-logo.png" alt="Certification 3" class="rounded-lg w-32 h-32 sm:w-44 sm:h-44 object-contain mb-4">
+                    <a href="pdf/certif-pix.pdf" target="_blank" class="text-indigo-300 hover:underline text-center">Voir la certification PIX</a>
+                </div>
+                <!-- Ajoute d'autres certifications ici -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 shadow mt-8">
+        <div class="container mx-auto px-4 py-6 text-center text-gray-400 text-sm">
+            &copy; 2025 Mon Portfolio. Tous droits réservés.
+        </div>
+    </footer>
+</body>
+</html>
