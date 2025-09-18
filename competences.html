@@ -9,19 +9,20 @@
 <body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
     <!-- Header -->
     <header class="bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-indigo-400">Mon Portfolio</h1>
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-400 mb-4 md:mb-0">Mon Portfolio</h1>
             <nav>
-                <ul class="flex space-x-6">
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
                     <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
                     <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
                     <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
-                    <li><a href="competences.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                     Compétences
-                    </a>
+                    <li>
+                        <a href="competences.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300">
+                            Compétences
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
                     </li>
                     <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
                     <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium">Veille Technologique</a></li>
@@ -34,52 +35,32 @@
     <main class="flex-grow">
         <section class="container mx-auto px-4 py-16">
             <h2 class="text-4xl font-extrabold mb-8 text-center text-indigo-300">Mes Compétences</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">HTML & CSS</h3>
                     <p class="text-gray-300 mb-4">Maîtrise de la création de sites web modernes et responsives.</p>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="bg-indigo-500 h-4 rounded-full" style="width: 60%;"></div>
-                    </div>
-                    <span class="text-sm text-gray-400 mt-2 block">60%</span>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
+                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">JavaScript</h3>
                     <p class="text-gray-300 mb-4">Développement d'interfaces dynamiques et interactives.</p>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="bg-indigo-500 h-4 rounded-full" style="width: 20%;"></div>
-                    </div>
-                    <span class="text-sm text-gray-400 mt-2 block">20%</span>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
+                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">Slidev</h3>
                     <p class="text-gray-300 mb-4">Permet de créer des présentations basé sur du MarkDown</p>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="bg-indigo-500 h-4 rounded-full" style="width: 50%;"></div>
-                    </div>
-                    <span class="text-sm text-gray-400 mt-2 block">50%</span>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
+                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">Tailwind CSS</h3>
                     <p class="text-gray-300 mb-4">Utilisation de Tailwind pour des designs rapides et efficaces.</p>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="bg-indigo-500 h-4 rounded-full" style="width: 40%;"></div>
-                    </div>
-                    <span class="text-sm text-gray-400 mt-2 block">40%</span>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
+                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">Git & GitHub</h3>
                     <p class="text-gray-300 mb-4">Gestion de versions et collaboration sur des projets.</p>
-                    <div class="w-full bg-gray-700 rounded-full h-4">
-                        <div class="bg-indigo-500 h-4 rounded-full" style="width: 85%;"></div>
-                    </div>
-                    <span class="text-sm text-gray-400 mt-2 block">85%</span>
                 </div>
             </div>
 
-            <h2 class="text-4xl font-extrabold mb-8 text-center mt-5 text-indigo-300">Mes stages / Expériences Profesionnelles</h2>
+            <h2 class="text-4xl font-extrabold mb-8 text-center mt-10 text-indigo-300">Mes stages / Expériences Professionnelles</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">Stage en Mairie</h3>
                     <p class="text-gray-300">Je m'occupais de l'entretien du village, de tout ce qui appartiens à la mairie.</p>
@@ -92,6 +73,14 @@
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">CDI Étudiant Leclerc Drive</h3>
                     <p class="text-gray-300 mb-4">J'y travaille tous les samedis, je prépare et livre les commandes aux clients.</p>
                 </div>
+                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">Stage de 3ème</h3>
+                    <p class="text-gray-300 mb-4">Chez Loras dans la mécanique Agricole.</p>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
+                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">CDD en Mairie</h3>
+                    <p class="text-gray-300 mb-4">Tout comme mon stage en Mairie, je faisais l'entretien de tous les terrains de la commune. CDD de 1 mois en Juillet 2023 et 2024.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -103,3 +92,4 @@
         </div>
     </footer>
 </body>
+</html>

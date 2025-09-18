@@ -9,17 +9,18 @@
 <body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
     <!-- Header -->
     <header class="bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-indigo-400">Mon Portfolio</h1>
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-400 mb-4 md:mb-0">Mon Portfolio</h1>
             <nav>
-                <ul class="flex space-x-6">
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
                     <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
-                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                     Projets
-                    </a>
+                    <li>
+                        <a href="projets.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300">
+                            Projets
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
                     </li>
                     <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
                     <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
@@ -34,7 +35,7 @@
     <main class="flex-grow">
         <section class="container mx-auto px-4 py-16">
             <h2 class="text-4xl font-extrabold mb-8 text-center text-indigo-300">Mes Projets</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Exemple de projet -->
                 <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">
                     <img src="images/projet1.png" alt="Projet 1" class="rounded-lg mb-4 w-full h-44 object-cover">
@@ -43,12 +44,12 @@
                     <p class="text-gray-300 mb-4 text-center">C'ets un afficheur qui permettait de savoir le nombre de personnes présente dans une salle</p>
                 </div>
                 <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">
-                    <img src="images/portfolio.png" alt="Projet 2" class="rounded-lg mb-4 w-full h-full object-cover">
+                    <img src="images/portfolio.png" alt="Projet 2" class="rounded-lg mb-4 w-full h-44 object-cover">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">Portfolio</h3>
                     <p class="text-gray-300 mb-4 text-center">Réalisation d'un Portfolio durant mes années de BTS SIO</p>
                 </div>
                 <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center">
-                    <img src="images/travaux.jpg" alt="Projet 3" class="rounded-lg mb-4 w-full h-full object-cover">
+                    <img src="images/travaux.jpg" alt="Projet 3" class="rounded-lg mb-4 w-full h-44 object-cover">
                     <h3 class="text-2xl font-bold mb-2 text-indigo-400">Stage</h3>
                     <p class="text-gray-300 mb-4 text-center">Réalisation d'un site internet pour mon stage de 1ère année de BTS</p>
                 </div>
@@ -63,3 +64,5 @@
             &copy; 2025 Mon Portfolio. Tous droits réservés.
         </div>
     </footer>
+</body>
+</html>

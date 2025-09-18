@@ -9,18 +9,19 @@
 <body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
     <!-- Header -->
     <header class="bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-indigo-400">Mon Portfolio</h1>
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-400 mb-4 md:mb-0">Mon Portfolio</h1>
             <nav>
-                <ul class="flex space-x-6">
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
                     <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
                     <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
-                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                     À propos
-                    </a>
+                    <li>
+                        <a href="propos.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300">
+                            À propos
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
                     </li>
                     <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
                     <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
@@ -34,7 +35,7 @@
     <main class="flex-grow">
         <section class="container mx-auto px-4 py-16 flex flex-col items-center">
             <h2 class="text-4xl font-extrabold mb-8 text-center text-indigo-300">À propos de moi</h2>
-            <img src="images/profil.png" alt="Photo de profil" class="rounded-full w-40 h-40 mb-6 border-4 border-indigo-400 shadow-lg object-cover">
+            <img src="images/profil.png" alt="Photo de profil" class="rounded-full w-32 h-32 sm:w-40 sm:h-40 mb-6 border-4 border-indigo-400 shadow-lg object-cover">
             <div class="max-w-2xl text-center">
                 <p class="text-lg mb-4 text-gray-300">
                     Bonjour, je m'appelle <span class="text-indigo-400 font-bold">Alessandro Acchini</span>, étudiant en BTS SIO passionné par le développement web et les nouvelles technologies. 
