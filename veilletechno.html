@@ -1,77 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Veille Technologique</title>
+    <!-- J'utilise la version la plus récente de Tailwind via le CDN pour un style au top -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Veille Technologique sur l'IA</title>
+    <style>
+        /* Petite transition pour un effet plus doux sur les onglets et les cartes */
+        .tab-button {
+            transition: all 0.3s ease-in-out;
+        }
+        .news-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
-    <!-- Header -->
+    <!-- Header (inchangé) -->
     <header class="bg-gray-800 shadow">
         <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-            <img src="images/logo.png" alt="Logo" class="h-12 w-auto mb-4 md:mb-0"> <!-- Ajout de classes pour limiter la taille -->
+            <img src="images/logo.png" alt="Logo" class="h-12 w-auto mb-4 md:mb-0">
             <nav>
                 <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                    <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
-                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
-                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
-                    <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
-                    <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
-                    <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                     Veille Technologique
-                    </a>
-                    </li>
-                    <li><a href="contact.html" class="hover:text-indigo-300 font-medium">Contact</a></li>
+                    <li><a href="index.html" class="hover:text-indigo-400 font-medium">Accueil</a></li>
+                    <li><a href="projets.html" class="hover:text-indigo-400 font-medium">Projets</a></li>
+                    <li><a href="propos.html" class="hover:text-indigo-400 font-medium">À propos</a></li>
+                    <li><a href="competences.html" class="hover:text-indigo-400 font-medium">Compétences</a></li>
+                    <li><a href="certifications.html" class="hover:text-indigo-400 font-medium">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="text-indigo-400 font-bold border-b-2 border-indigo-400 pb-1">Veille Technologique</a></li>
+                    <li><a href="contact.html" class="hover:text-indigo-400 font-medium">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="flex-grow">
-        <section class="container mx-auto px-4 py-16">
-            <h2 class="text-4xl font-extrabold mb-8 text-center text-indigo-300">Veille Technologique</h2>
-            <div class="max-w-3xl mx-auto bg-gray-800 rounded-lg shadow p-8 mb-10">
+    <main class="flex-grow container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold text-indigo-400">Ma Veille Technologique - Intelligence Artificielle</h2>
+            <p class="mt-4 text-lg text-gray-400">Les dernières actualités des sources spécialisées en IA que je suis au quotidien.</p>
+        </div>
+
+                <!-- Section explicative (gardée de ton code original) -->
+        <div class="max-w-4xl mx-auto mt-12 space-y-8">
+             <div class="bg-gray-800 rounded-lg shadow-lg p-8">
                 <h3 class="text-2xl font-bold text-indigo-400 mb-4 text-center">Qu'est-ce que la veille technologique ?</h3>
-                <p class="text-gray-300 mb-4 text-center">
-                    La veille technologique consiste à s'informer en continu sur les innovations, les nouvelles tendances et les évolutions dans le domaine des technologies de l'information. Elle permet d’anticiper les changements, d’adapter ses compétences et de rester compétitif dans un secteur en perpétuelle évolution.
-                </p>
+                <p class="text-gray-300 text-center">La veille technologique consiste à s'informer en continu sur les innovations, les nouvelles tendances et les évolutions dans un domaine de pointe. Pour moi, c'est l'Intelligence Artificielle. Elle permet d’anticiper les changements, d’adapter ses compétences et de rester compétitif dans un secteur en perpétuelle évolution.</p>
             </div>
-            <div class="max-w-3xl mx-auto">
-                <h3 class="text-xl font-bold text-indigo-300 mb-4">Exemple de sujet suivi : L'intelligence artificielle générative</h3>
-                <div class="bg-gray-800 rounded-lg shadow p-6 mb-6">
-                    <p class="text-gray-300 mb-2">
-                        L’IA générative, comme ChatGPT ou DALL-E, révolutionne la création de contenus (texte, image, code, etc.). Elle s’intègre dans de nombreux outils professionnels et soulève des questions sur l’éthique, la sécurité et l’automatisation des métiers.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-400 mb-2">
-                        <li>Applications : assistants virtuels, génération de code, création artistique, etc.</li>
-                        <li>Enjeux : fiabilité, biais, protection des données, impact sur l’emploi.</li>
-                        <li>Outils suivis : OpenAI, Google Gemini, Microsoft Copilot, Midjourney...</li>
-                    </ul>
-                    <p class="text-gray-400 text-sm">Sources : <a href="https://openai.com/blog" target="_blank" class="text-indigo-300 hover:underline">OpenAI Blog</a>, <a href="https://www.lemondeinformatique.fr/" target="_blank" class="text-indigo-300 hover:underline">Le Monde Informatique</a></p>
-                </div>
-                <h3 class="text-xl font-bold text-indigo-300 mb-4">Méthodes et outils de veille</h3>
-                <div class="bg-gray-800 rounded-lg shadow p-6">
-                    <ul class="list-disc list-inside text-gray-300 mb-2">
-                        <li>Alertes Google</li>
-                        <li>Réseaux sociaux (Twitter/X, Tiktok, Reddit ...)</li>
-                        <li>Sites spécialisés (ZDNet, Journal du Net, etc.)</li>
-                        <li>Podcasts et newsletters tech</li>
-                    </ul>
-                </div>
+             <div class="bg-gray-800 rounded-lg shadow-lg p-8">
+                <h3 class="text-xl font-bold text-indigo-300 mb-4">Sujet principal : L'intelligence artificielle générative</h3>
+                <p class="text-gray-300 mb-2">L’IA générative, comme les modèles Gemini, GPT ou les générateurs d'images, révolutionne la création de contenus (texte, image, code, etc.). Elle s’intègre dans de nombreux outils professionnels et soulève des questions sur l’éthique, la sécurité et l’automatisation des métiers.</p>
+                <ul class="list-disc list-inside text-gray-400 mb-2">
+                    <li>Applications : assistants virtuels, génération de code, création artistique, etc.</li>
+                    <li>Enjeux : fiabilité, biais, protection des données, impact sur l’emploi.</li>
+                    <li>Outils suivis : Google Gemini, OpenAI, Microsoft Copilot, Midjourney, NVIDIA...</li>
+                </ul>
             </div>
-        </section>
+        </div>
+        <br>
+
+        <!-- Section de veille dynamique -->
+        <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg shadow-xl p-6 md:p-8">
+            <!-- Onglets de navigation pour les sources -->
+            <div id="tabs-container" class="flex flex-wrap justify-center border-b border-gray-700 mb-6">
+                <!-- Les onglets seront générés ici par le script -->
+            </div>
+
+            <!-- Conteneur pour les actualités -->
+            <div id="news-container" class="grid grid-cols-1 gap-6">
+                <!-- Le contenu (cartes d'actualités, message de chargement/erreur) sera injecté ici -->
+            </div>
+        </div>
+
+
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (inchangé) -->
     <footer class="bg-gray-800 shadow mt-8">
         <div class="container mx-auto px-4 py-6 text-center text-gray-400 text-sm">
             &copy; 2025 Mon Portfolio. Tous droits réservés.
         </div>
     </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- CONFIGURATION ---
+    // Sources de la veille spécialisées sur l'Intelligence Artificielle.
+    const sources = {
+        'Google AI Blog': 'https://blog.google/technology/ai/rss/',
+        'NVIDIA Blog': 'https://feeds.feedburner.com/nvidiablog',
+        'Actu IA': 'https://www.actuia.com/feed/'
+    };
+
+    const tabsContainer = document.getElementById('tabs-container');
+    const newsContainer = document.getElementById('news-container');
+    const API_ENDPOINT = 'https://api.rss2json.com/v1/api.json?rss_url=';
+
+    /**
+     * Nettoie une chaîne HTML pour éviter les problèmes d'affichage et la tronque.
+     * @param {string} htmlString - La description HTML de l'article.
+     * @param {number} maxLength - La longueur maximale du texte.
+     * @returns {string} Le texte nettoyé et tronqué.
+     */
+    function sanitizeAndTruncate(htmlString, maxLength) {
+        // Crée un élément temporaire pour parser le HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = htmlString;
+
+        // Récupère le texte brut et nettoie les espaces multiples
+        const text = (tempDiv.textContent || tempDiv.innerText || "").trim().replace(/\s+/g, ' ');
+        
+        if (text.length <= maxLength) {
+            return text;
+        }
+        // Tronque proprement à la fin d'un mot
+        let truncatedText = text.slice(0, maxLength);
+        truncatedText = truncatedText.slice(0, Math.min(truncatedText.length, truncatedText.lastIndexOf(" ")));
+        return truncatedText + '...';
+    }
+    
+    /**
+     * Affiche les actualités d'un flux RSS donné.
+     * @param {string} sourceName - Le nom de la source (ex: 'Google AI Blog').
+     * @param {string} rssUrl - L'URL du flux RSS.
+     */
+    async function displayFeed(sourceName, rssUrl) {
+        // Met à jour le style de l'onglet actif
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('text-indigo-400', 'border-indigo-400');
+            btn.classList.add('text-gray-400', 'border-transparent');
+            if (btn.dataset.source === sourceName) {
+                btn.classList.add('text-indigo-400', 'border-indigo-400');
+                btn.classList.remove('text-gray-400', 'border-transparent');
+            }
+        });
+
+        // Affiche un message de chargement
+        newsContainer.innerHTML = `<p class="text-center text-gray-400 col-span-full">Chargement des actualités de ${sourceName}...</p>`;
+
+        try {
+            const response = await fetch(`${API_ENDPOINT}${encodeURIComponent(rssUrl)}`);
+            if (!response.ok) {
+                throw new Error(`Erreur réseau : ${response.statusText}`);
+            }
+            const data = await response.json();
+
+            if (data.status !== 'ok' || !data.items || data.items.length === 0) {
+                 newsContainer.innerHTML = `<p class="text-center text-red-400 col-span-full">Impossible de charger le flux ou aucune actualité trouvée pour ${sourceName}.</p>`;
+                 return;
+            }
+
+            // Vide le conteneur et affiche les nouvelles cartes
+            newsContainer.innerHTML = '';
+            data.items.slice(0, 10).forEach(item => { // Limite aux 10 articles les plus récents
+                const pubDate = new Date(item.pubDate).toLocaleDateString('fr-FR', {
+                    year: 'numeric', month: 'long', day: 'numeric'
+                });
+                const description = sanitizeAndTruncate(item.description, 150);
+
+                const card = `
+                    <div class="news-card bg-gray-700 rounded-lg shadow-md p-6 flex flex-col">
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-xs font-semibold text-indigo-300 uppercase">${sourceName}</span>
+                                <span class="text-xs text-gray-400">${pubDate}</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-100 mb-3">${item.title}</h3>
+                            <p class="text-gray-300 text-sm">${description}</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="${item.link}" target="_blank" rel="noopener noreferrer" 
+                               class="inline-block text-indigo-300 hover:text-indigo-200 font-semibold transition-colors duration-300">
+                                Lire l'article &rarr;
+                            </a>
+                        </div>
+                    </div>
+                `;
+                newsContainer.innerHTML += card;
+            });
+
+        } catch (error) {
+            console.error('Erreur lors de la récupération du flux RSS:', error);
+            newsContainer.innerHTML = `<p class="text-center text-red-400 col-span-full">Oups ! Une erreur est survenue en chargeant les actualités de ${sourceName}.</p>`;
+        }
+    }
+
+    // --- INITIALISATION ---
+    
+    // Crée les onglets
+    Object.keys(sources).forEach(name => {
+        const button = document.createElement('button');
+        button.className = 'tab-button text-gray-400 py-2 px-4 font-medium border-b-2 border-transparent hover:text-indigo-400';
+        button.textContent = name;
+        button.dataset.source = name; // Stocke le nom pour le retrouver
+        button.addEventListener('click', () => displayFeed(name, sources[name]));
+        tabsContainer.appendChild(button);
+    });
+
+    // Charge le premier flux par défaut au chargement de la page
+    const firstSourceName = Object.keys(sources)[0];
+    if (firstSourceName) {
+        displayFeed(firstSourceName, sources[firstSourceName]);
+    }
+});
+</script>
 </body>
 </html>
