@@ -1,65 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Certifications</title>
+    <title>Certifications – Alessandro Acchini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #6366f1; transition: width 0.3s; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(99,102,241,0.15); }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
     <!-- Header -->
-    <header class="bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-            <img src="images/logo.png" alt="Logo" class="h-12 w-auto mb-4 md:mb-0"> <!-- Ajout de classes pour limiter la taille -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
             <nav>
-                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                    <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
-                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
-                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
-                    <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
-                    <li><a href="certifications.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                     Certifications
-                    </a>
-                    </li>
-                    <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium">Veille Technologique</a></li>
-                    <li><a href="contact.html" class="hover:text-indigo-300 font-medium">Contact</a></li>
+                <ul class="flex flex-wrap justify-center gap-1">
+                    <li><a href="index.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Accueil</a></li>
+                    <li><a href="projets.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Projets</a></li>
+                    <li><a href="propos.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">À propos</a></li>
+                    <li><a href="competences.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Compétences</a></li>
+                    <li><a href="certifications.html" class="nav-link active px-3 py-2 rounded-lg text-indigo-600 font-semibold text-sm">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Veille Techno</a></li>
+                    <li><a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-indigo-600 to-violet-600 text-white py-14 px-6 text-center">
+        <h1 class="text-4xl font-extrabold mb-2">Mes Certifications</h1>
+        <p class="text-indigo-200 text-lg">Attestations et diplômes obtenus</p>
+    </div>
+
     <!-- Main Content -->
-    <main class="flex-grow">
-        <section class="container mx-auto px-4 py-10 md:py-16">
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-8 text-center text-indigo-300">Mes Certifications</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Certification 1 -->
-                <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center">
-                    <img src="images/mooc.png" alt="Certification 1" class="rounded-lg w-32 h-32 sm:w-44 sm:h-44 object-contain mb-4">
-                    <a href="pdf/certifmooc.pdf" target="_blank" class="text-indigo-300 hover:underline text-center">Voir la certification MOOC</a>
+    <main class="flex-grow container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+            <!-- Certification 1 -->
+            <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-8 flex flex-col items-center text-center">
+                <div class="w-32 h-32 flex items-center justify-center mb-6 bg-slate-50 rounded-2xl p-3">
+                    <img src="images/mooc.png" alt="MOOC" class="max-w-full max-h-full object-contain">
                 </div>
-                <!-- Certification 2 -->
-                <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center">
-                    <img src="images/CNIL_logo.png" alt="Certification 2" class="rounded-lg w-32 h-24 sm:w-44 sm:h-32 object-contain mb-4">
-                    <a href="pdf/ATELIER_RGPD.pdf" target="_blank" class="text-indigo-300 hover:underline text-center">Voir l'atelier RGPD</a>
-                </div>
-                <!-- Certification 3 -->
-                <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center">
-                    <img src="images/pix-logo.png" alt="Certification 3" class="rounded-lg w-32 h-32 sm:w-44 sm:h-44 object-contain mb-4">
-                    <a href="pdf/certif-pix.pdf" target="_blank" class="text-indigo-300 hover:underline text-center">Voir la certification PIX</a>
-                </div>
-                <!-- Ajoute d'autres certifications ici -->
+                <h3 class="font-bold text-slate-800 text-lg mb-2">MOOC</h3>
+                <p class="text-slate-500 text-sm mb-5">Certification obtenue via le MOOC de l'ANSSI</p>
+                <a href="pdf/certifmooc.pdf" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-indigo-700 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Voir la certification
+                </a>
             </div>
-        </section>
+
+            <!-- Certification 2 -->
+            <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-8 flex flex-col items-center text-center">
+                <div class="w-32 h-32 flex items-center justify-center mb-6 bg-slate-50 rounded-2xl p-3">
+                    <img src="images/CNIL_logo.png" alt="CNIL" class="max-w-full max-h-full object-contain">
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Atelier RGPD – CNIL</h3>
+                <p class="text-slate-500 text-sm mb-5">Formation sur la protection des données personnelles</p>
+                <a href="pdf/ATELIER_RGPD.pdf" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-indigo-700 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Voir l'atelier
+                </a>
+            </div>
+
+            <!-- Certification 3 -->
+            <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-8 flex flex-col items-center text-center">
+                <div class="w-32 h-32 flex items-center justify-center mb-6 bg-slate-50 rounded-2xl p-3">
+                    <img src="images/pix-logo.png" alt="PIX" class="max-w-full max-h-full object-contain">
+                </div>
+                <h3 class="font-bold text-slate-800 text-lg mb-2">Certification PIX</h3>
+                <p class="text-slate-500 text-sm mb-5">Évaluation des compétences numériques</p>
+                <a href="pdf/certif-pix.pdf" target="_blank" class="inline-flex items-center gap-2 bg-indigo-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-indigo-700 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Voir la certification
+                </a>
+            </div>
+
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 shadow mt-8">
-        <div class="container mx-auto px-4 py-6 text-center text-gray-400 text-sm">
-            &copy; 2025 Mon Portfolio. Tous droits réservés.
+    <footer class="bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400 text-sm">
+            &copy; 2025 Alessandro Acchini – Tous droits réservés.
         </div>
     </footer>
 </body>

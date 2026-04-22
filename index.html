@@ -1,51 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Portfolio</title>
+    <title>Portfolio – Alessandro Acchini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #6366f1; transition: width 0.3s; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(99,102,241,0.15); }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
     <!-- Header -->
-    <header class="bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-            <img src="images/logo.png" alt="Logo" class="h-12 w-auto mb-4 md:mb-0"> <!-- Ajout de classes pour limiter la taille -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
             <nav>
-                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                    <li>
-                        <a href="index.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300">
-                            
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                            Accueil
-                        </a>
-                    </li>
-                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
-                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
-                    <li><a href="competences.html" class="hover:text-indigo-300 font-medium">Compétences</a></li>
-                    <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
-                    <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium">Veille Technologique</a></li>
-                    <li><a href="contact.html" class="hover:text-indigo-300 font-medium">Contact</a></li>
+                <ul class="flex flex-wrap justify-center gap-1">
+                    <li><a href="index.html" class="nav-link active px-3 py-2 rounded-lg text-indigo-600 font-semibold text-sm">Accueil</a></li>
+                    <li><a href="projets.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Projets</a></li>
+                    <li><a href="propos.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">À propos</a></li>
+                    <li><a href="competences.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Compétences</a></li>
+                    <li><a href="certifications.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Veille Techno</a></li>
+                    <li><a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Hero -->
     <main class="flex-grow">
-        <section class="container mx-auto px-4 py-16 text-center">
-            <h2 class="text-4xl font-extrabold mb-4 text-indigo-300">Bienvenue sur mon portfolio !</h2>
-            <p class="text-lg mb-8 text-indigo-300">Je suis développeur web passionné, découvrez mes projets et compétences.</p>
-            <a href="projets.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">Voir mes projets</a>
+        <section class="hero-gradient text-white py-28 px-6 text-center">
+            <div class="container mx-auto max-w-3xl">
+                <span class="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-6 tracking-wide uppercase">BTS SIO – Développeur Web</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Bienvenue sur<br>mon portfolio !</h1>
+                <p class="text-xl text-indigo-100 mb-10 max-w-xl mx-auto">Je suis Alessandro Acchini, passionné par le développement web et les nouvelles technologies.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="projets.html" class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-xl shadow-lg hover:shadow-xl hover:bg-indigo-50 transition-all">Voir mes projets</a>
+                    <a href="contact.html" class="bg-white/20 text-white font-bold px-8 py-3 rounded-xl border border-white/30 hover:bg-white/30 transition-all">Me contacter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick links -->
+        <section class="container mx-auto px-6 py-20">
+            <h2 class="text-2xl font-bold text-center text-slate-700 mb-12">Explorer le portfolio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <a href="projets.html" class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-8 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition-colors">
+                        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Projets</h3>
+                    <p class="text-slate-500 text-sm">Mes réalisations et travaux pratiques</p>
+                </a>
+                <a href="competences.html" class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-8 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-violet-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-violet-200 transition-colors">
+                        <svg class="w-7 h-7 text-violet-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Compétences</h3>
+                    <p class="text-slate-500 text-sm">Technologies maîtrisées et expériences</p>
+                </a>
+                <a href="certifications.html" class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-8 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition-colors">
+                        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Certifications</h3>
+                    <p class="text-slate-500 text-sm">Diplômes et attestations obtenus</p>
+                </a>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 shadow mt-8">
-        <div class="container mx-auto px-4 py-6 text-center text-gray-400">
-            &copy; 2025 Mon Portfolio. Tous droits réservés.
+    <footer class="bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400 text-sm">
+            &copy; 2025 Alessandro Acchini – Tous droits réservés.
         </div>
     </footer>
 </body>

@@ -1,100 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Compétences</title>
+    <title>Compétences – Alessandro Acchini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #6366f1; transition: width 0.3s; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(99,102,241,0.15); }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
     <!-- Header -->
-    <header class="bg-gray-800 shadow">
-        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-            <img src="images/logo.png" alt="Logo" class="h-12 w-auto mb-4 md:mb-0"> <!-- Ajout de classes pour limiter la taille -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
             <nav>
-                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                    <li><a href="index.html" class="hover:text-indigo-300 font-medium">Accueil</a></li>
-                    <li><a href="projets.html" class="hover:text-indigo-300 font-medium">Projets</a></li>
-                    <li><a href="propos.html" class="hover:text-indigo-300 font-medium">À propos</a></li>
-                    <li>
-                        <a href="competences.html" class="hover:text-indigo-300 font-medium flex items-center text-indigo-300">
-                           
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                            Compétences
-                        </a>
-                    </li>
-                    <li><a href="certifications.html" class="hover:text-indigo-300 font-medium">Certifications</a></li>
-                    <li><a href="veilletechno.html" class="hover:text-indigo-300 font-medium">Veille Technologique</a></li>
-                    <li><a href="contact.html" class="hover:text-indigo-300 font-medium">Contact</a></li>
+                <ul class="flex flex-wrap justify-center gap-1">
+                    <li><a href="index.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Accueil</a></li>
+                    <li><a href="projets.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Projets</a></li>
+                    <li><a href="propos.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">À propos</a></li>
+                    <li><a href="competences.html" class="nav-link active px-3 py-2 rounded-lg text-indigo-600 font-semibold text-sm">Compétences</a></li>
+                    <li><a href="certifications.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Veille Techno</a></li>
+                    <li><a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-indigo-600 to-violet-600 text-white py-14 px-6 text-center">
+        <h1 class="text-4xl font-extrabold mb-2">Mes Compétences</h1>
+        <p class="text-indigo-200 text-lg">Technologies et expériences professionnelles</p>
+    </div>
+
     <!-- Main Content -->
-    <main class="flex-grow">
-        <section class="container mx-auto px-4 py-16">
-            <h2 class="text-4xl font-extrabold mb-8 text-center text-indigo-300">Mes Compétences</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">HTML & CSS</h3>
-                    <p class="text-gray-300 mb-4">Maîtrise de la création de sites web modernes et responsives.</p>
+    <main class="flex-grow container mx-auto px-6 py-16">
+
+        <!-- Compétences techniques -->
+        <div class="max-w-5xl mx-auto mb-16">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">JavaScript</h3>
-                    <p class="text-gray-300 mb-4">Développement d'interfaces dynamiques et interactives.</p>
+                <h2 class="text-2xl font-bold text-slate-800">Compétences techniques</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-orange-600 font-bold text-sm">H</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">HTML & CSS</h3>
+                    <p class="text-slate-500 text-sm">Création de sites web modernes et responsives.</p>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">Slidev</h3>
-                    <p class="text-gray-300 mb-4">Permet de créer des présentations basé sur du MarkDown</p>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <div class="w-10 h-10 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-yellow-600 font-bold text-sm">JS</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">JavaScript</h3>
+                    <p class="text-slate-500 text-sm">Développement d'interfaces dynamiques et interactives.</p>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">Tailwind CSS</h3>
-                    <p class="text-gray-300 mb-4">Utilisation de Tailwind pour des designs rapides et efficaces.</p>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-green-600 font-bold text-sm">S</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Slidev</h3>
+                    <p class="text-slate-500 text-sm">Création de présentations basées sur Markdown.</p>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-8 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">Git & GitHub</h3>
-                    <p class="text-gray-300 mb-4">Gestion de versions et collaboration sur des projets.</p>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <div class="w-10 h-10 bg-sky-100 rounded-xl flex items-center justify-center mb-4">
+                        <span class="text-sky-600 font-bold text-sm">TW</span>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Tailwind CSS</h3>
+                    <p class="text-slate-500 text-sm">Designs rapides et efficaces avec Tailwind.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <div class="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-slate-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-lg mb-1">Git & GitHub</h3>
+                    <p class="text-slate-500 text-sm">Gestion de versions et collaboration sur des projets.</p>
                 </div>
             </div>
+        </div>
 
-            <h2 class="text-4xl font-extrabold mb-8 text-center mt-10 text-indigo-300">Mes stages / Expériences Professionnelles</h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">Stage en Mairie</h3>
-                    <p class="text-gray-300">Je m'occupais de l'entretien du village, de tout ce qui appartiens à la mairie.</p>
+        <!-- Expériences professionnelles -->
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-8 h-8 bg-violet-100 rounded-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">CDD Sport Bowling Vesoul</h3>
-                    <p class="text-gray-300 mb-4">J'étais à la fois, serveur, préparateur au bar, et je m'occupais de l'entretien du bâtiment.</p>
+                <h2 class="text-2xl font-bold text-slate-800">Stages & Expériences professionnelles</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">Stage</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Stage en Mairie</h3>
+                    <p class="text-slate-500 text-sm">Entretien du village et des biens appartenant à la mairie.</p>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">CDI Étudiant Leclerc Drive</h3>
-                    <p class="text-gray-300 mb-4">J'y travaille tous les samedis, je prépare et livre les commandes aux clients.</p>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">CDD</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Sport Bowling Vesoul</h3>
+                    <p class="text-slate-500 text-sm">Serveur, préparateur au bar et entretien du bâtiment.</p>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">Stage de 3ème</h3>
-                    <p class="text-gray-300 mb-4">Chez Loras dans la mécanique Agricole.</p>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">CDI Étudiant</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Leclerc Drive</h3>
+                    <p class="text-slate-500 text-sm">Préparation et livraison des commandes aux clients chaque samedi.</p>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">CDD en Mairie</h3>
-                    <p class="text-gray-300 mb-4">Tout comme mon stage en Mairie, je faisais l'entretien de tous les terrains de la commune. CDD de 1 mois en Juillet 2023 et 2024.</p>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">Stage de 3ème</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Loras – Mécanique Agricole</h3>
+                    <p class="text-slate-500 text-sm">Découverte du secteur de la mécanique agricole.</p>
                 </div>
-                <div class="bg-gray-800 rounded-lg shadow p-6 text-center">
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-400">CDI Étudiant Employé Polyvalent LIDL</h3>
-                    <p class="text-gray-300 mb-4">Job étudiant le week-end, je m'occupe de la boulangerie, des caisses et du magasin en général.</p>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">CDD</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">CDD en Mairie</h3>
+                    <p class="text-slate-500 text-sm">Entretien des terrains de la commune. CDD d'1 mois en juillet 2023 et 2024.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                    <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">CDI Étudiant</span>
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Employé Polyvalent LIDL</h3>
+                    <p class="text-slate-500 text-sm">Boulangerie, caisses et gestion du magasin le week-end.</p>
                 </div>
             </div>
-        </section>
+        </div>
+
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 shadow mt-8">
-        <div class="container mx-auto px-4 py-6 text-center text-gray-400">
-            &copy; 2025 Mon Portfolio. Tous droits réservés.
+    <footer class="bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400 text-sm">
+            &copy; 2025 Alessandro Acchini – Tous droits réservés.
         </div>
     </footer>
 </body>
