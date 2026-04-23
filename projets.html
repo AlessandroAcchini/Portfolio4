@@ -19,9 +19,14 @@
 
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
-        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <img src="images/logo.png" alt="Logo" class="h-16 w-auto">
-            <nav>
+            <button id="burger" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-slate-100 transition-colors gap-1.5" aria-label="Menu">
+                <span class="burger-line block w-6 h-0.5 bg-slate-700 transition-all duration-300"></span>
+                <span class="burger-line block w-6 h-0.5 bg-slate-700 transition-all duration-300"></span>
+                <span class="burger-line block w-6 h-0.5 bg-slate-700 transition-all duration-300"></span>
+            </button>
+            <nav id="nav-menu" class="hidden md:block">
                 <ul class="flex flex-wrap justify-center gap-1">
                     <li><a href="index.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Accueil</a></li>
                     <li><a href="projets.html" class="nav-link active px-3 py-2 rounded-lg text-indigo-600 font-semibold text-sm">Projets</a></li>
@@ -32,6 +37,17 @@
                     <li><a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Contact</a></li>
                 </ul>
             </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+            <ul class="flex flex-col px-6 py-3 gap-1">
+                <li><a href="index.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm transition-colors">Accueil</a></li>
+                <li><a href="projets.html" class="block px-3 py-2.5 rounded-lg text-indigo-600 font-semibold text-sm bg-indigo-50">Projets</a></li>
+                <li><a href="propos.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm transition-colors">À propos</a></li>
+                <li><a href="competences.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm transition-colors">Compétences</a></li>
+                <li><a href="certifications.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm transition-colors">Certifications</a></li>
+                <li><a href="veilletechno.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm transition-colors">Veille Techno</a></li>
+                <li><a href="contact.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm transition-colors">Contact</a></li>
+            </ul>
         </div>
     </header>
 
@@ -90,5 +106,17 @@
             &copy; 2025 Alessandro Acchini – Tous droits réservés.
         </div>
     </footer>
+<script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const lines = burger.querySelectorAll('.burger-line');
+    burger.addEventListener('click', () => {
+        const open = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', open);
+        lines[0].style.transform = open ? '' : 'translateY(8px) rotate(45deg)';
+        lines[1].style.opacity = open ? '' : '0';
+        lines[2].style.transform = open ? '' : 'translateY(-8px) rotate(-45deg)';
+    });
+</script>
 </body>
 </html>
