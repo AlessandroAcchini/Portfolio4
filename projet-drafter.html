@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Misfeets Drafter – Alessandro Acchini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #6366f1; transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <img src="images/logo.png" alt="Logo" class="h-16 w-auto">
+            <button id="burger" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-slate-100 transition-colors gap-1.5" aria-label="Menu">
+                <span class="burger-line block w-6 h-0.5 bg-slate-700 transition-all duration-300"></span>
+                <span class="burger-line block w-6 h-0.5 bg-slate-700 transition-all duration-300"></span>
+                <span class="burger-line block w-6 h-0.5 bg-slate-700 transition-all duration-300"></span>
+            </button>
+            <nav id="nav-menu" class="hidden md:block">
+                <ul class="flex flex-wrap justify-center gap-1">
+                    <li><a href="index.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Accueil</a></li>
+                    <li><a href="projets.html" class="nav-link active px-3 py-2 rounded-lg text-indigo-600 font-semibold text-sm">Projets</a></li>
+                    <li><a href="propos.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">À propos</a></li>
+                    <li><a href="competences.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Compétences</a></li>
+                    <li><a href="certifications.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Certifications</a></li>
+                    <li><a href="veilletechno.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Veille Techno</a></li>
+                    <li><a href="contact.html" class="nav-link px-3 py-2 rounded-lg text-slate-600 hover:text-indigo-600 font-medium text-sm transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+            <ul class="flex flex-col px-6 py-3 gap-1">
+                <li><a href="index.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm">Accueil</a></li>
+                <li><a href="projets.html" class="block px-3 py-2.5 rounded-lg text-indigo-600 font-semibold text-sm bg-indigo-50">Projets</a></li>
+                <li><a href="propos.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm">À propos</a></li>
+                <li><a href="competences.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm">Compétences</a></li>
+                <li><a href="certifications.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm">Certifications</a></li>
+                <li><a href="veilletechno.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm">Veille Techno</a></li>
+                <li><a href="contact.html" class="block px-3 py-2.5 rounded-lg text-slate-600 hover:text-indigo-600 hover:bg-slate-50 font-medium text-sm">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 pt-8">
+        <a href="projets.html" class="inline-flex items-center gap-2 text-slate-500 hover:text-indigo-600 text-sm font-medium transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            Retour aux projets
+        </a>
+    </div>
+
+    <main class="flex-grow container mx-auto px-6 py-10 max-w-4xl">
+
+        <!-- Hero -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-8">
+            <div class="bg-gradient-to-br from-slate-900 via-violet-950 to-slate-900 h-56 flex items-center justify-center">
+                <div class="text-center text-white px-6">
+                    <div class="text-5xl font-extrabold tracking-tight mb-2">DRAFTER</div>
+                    <div class="text-violet-300 font-semibold tracking-widest text-sm uppercase">Outil de draft League of Legends</div>
+                </div>
+            </div>
+            <div class="p-8">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                    <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full">Projet personnel</span>
+                    <span class="bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">League of Legends</span>
+                    <span class="bg-slate-100 text-slate-600 text-xs font-semibold px-3 py-1 rounded-full">En ligne</span>
+                </div>
+                <h1 class="text-3xl font-extrabold text-slate-800 mb-4">Misfeets Drafter</h1>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Outil de draft en ligne pour les tournois League of Legends. Deux équipes s'affrontent en temps réel pour choisir leurs champions selon le mode de jeu (Normal ou Fearless), sur une session partagée via URL unique.
+                </p>
+                <a href="https://drafter.misfeets.com/" target="_blank" class="inline-flex items-center gap-2 bg-violet-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-violet-700 transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    Voir le site
+                </a>
+            </div>
+        </div>
+
+        <!-- Détails -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                <h2 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-violet-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-4 h-4 text-violet-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    </span>
+                    Fonctionnalités
+                </h2>
+                <ul class="space-y-2 text-slate-500 text-sm">
+                    <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">•</span>Création de session de draft avec URL partageable</li>
+                    <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">•</span>Deux modes : Normal et Fearless</li>
+                    <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">•</span>Choix du nombre de games (1 à 5)</li>
+                    <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">•</span>Interface en temps réel pour les deux équipes</li>
+                    <li class="flex items-start gap-2"><span class="text-violet-400 mt-0.5">•</span>Intégré aux tournois Misfeets</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+                <h2 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                    <span class="w-7 h-7 bg-indigo-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </span>
+                    Technologies
+                </h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg">PHP</span>
+                    <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg">JavaScript</span>
+                    <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg">WebSocket</span>
+                    <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg">HTML / CSS</span>
+                    <span class="bg-slate-100 text-slate-700 text-xs font-medium px-3 py-1.5 rounded-lg">API Riot Games</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aperçu iframe -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
+            <h2 class="font-bold text-slate-800 text-lg mb-4">Aperçu du site</h2>
+            <div class="rounded-xl overflow-hidden border border-slate-200 h-96">
+                <iframe src="https://drafter.misfeets.com/" class="w-full h-full" title="Misfeets Drafter"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400 text-sm">
+            &copy; 2025 Alessandro Acchini – Tous droits réservés.
+        </div>
+    </footer>
+
+<script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const lines = burger.querySelectorAll('.burger-line');
+    burger.addEventListener('click', () => {
+        const open = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', open);
+        lines[0].style.transform = open ? '' : 'translateY(8px) rotate(45deg)';
+        lines[1].style.opacity = open ? '' : '0';
+        lines[2].style.transform = open ? '' : 'translateY(-8px) rotate(-45deg)';
+    });
+</script>
+</body>
+</html>
